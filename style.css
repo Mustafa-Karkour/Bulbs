@@ -13,6 +13,8 @@
   width: 100%;
   color: #fff; /* text color */
   position: relative;
+
+  overflow: hidden;
 }
 
 nav {
@@ -37,6 +39,8 @@ nav ul {
   flex: 1;
   text-align: right;
   margin-right: 55px;
+
+  display: none;
 }
 
 nav ul li {
@@ -69,14 +73,13 @@ button span {
   border-radius: 50%;
   margin-left: 2px;
   transition: background 1s, margin-left 1s;
-
 }
 
 .lamp-container {
   position: absolute;
   top: 0; /* top of the .hero */
-  left: 15%;
-  width: 250px;
+  left: 14%;
+  width: 248px;
 }
 
 .lamp-img {
@@ -88,21 +91,22 @@ button span {
   top: 93%; /* bottom of lamp container */
   left: 50%;
   transform: translateX(-51.3%);
-  width: 550px;
+  width: 590px;
   margin-left: -0.5px;
   opacity: 0; /* hide the light */
   transition: opacity 1s; /*slowly hide the light */
-
 }
 
 .text-container {
   max-width: 600px;
-  margin-top: 7%;
-  margin-left: 50%;
+  margin-top: 41%;
+  margin-left: 20%;
+  opacity: 0;
+  transition: opacity 0.7s;
 }
 
 .text-container h1 {
-  font-size: 80px;
+  font-size: 43px;
   font-weight: 400;
 }
 
@@ -118,7 +122,7 @@ button span {
   padding: 14px 40px;
   border-radius: 25px;
   position: absolute;
-  left: 61%;
+  left: 18%;
   font-size: 18px;
 }
 
@@ -128,6 +132,8 @@ button span {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
+  display: none;
 }
 
 .control .line {
@@ -152,39 +158,36 @@ button span {
 .active {
   background-color: green;
   transition: background 1s;
-
 }
 
 .active span {
   background-color: #fff;
   margin-left: 29px;
   transition: background-color 1s, margin-left 1s;
-
 }
 
-.active-light{
-    opacity: 100;
-    transition: opacity 1s;
+.active-light {
+  opacity: 100;
+  transition: opacity 0.7s;
 }
 
-.thing{
+.thing {
   position: absolute;
   top: -51px;
   left: 89%;
-  width:26px;
+  width: 22px;
   cursor: pointer;
 
   transform: translateY(0);
   transition: transform 0.7s;
-  
 }
 
-.activeThing{
+.activeThing {
   transform: translateY(32px);
   transition: transform 0.7s;
 }
 
-.think{
+.think {
   position: absolute;
   top: 295px;
   left: 200px;
@@ -192,12 +195,171 @@ button span {
   opacity: 0;
   transition: opacity 0.7s;
 
+  display: none;
 }
 
-.active-think{
+.active-think {
   opacity: 50%;
   transition: opacity 0.7s;
 }
 
 
+/* Small Size Screens  */
+@media only screen and (min-width: 200px) {
+  
+  .lamp-container {
+    left: 1%;
+    width: 275px;
+}
 
+.text-container{
+  margin-top:52%;
+}
+
+.text-container a {
+    left: 15%;
+    font-size: 14px;
+}
+
+}
+
+@media only screen and (min-width: 400px){
+  .text-container {
+    margin-top: 41%;
+    margin-left: 24%;
+}
+
+.text-container a {
+  left: 21%;
+}
+
+.lamp-container {
+    left: 16%;
+    width: 262px;
+}
+}
+
+/* Semi-Medium Size Screens (tablets) */
+@media only screen and (min-width: 600px) {
+  .text-container {
+    margin-top: 37%;
+    margin-left: 17%;
+  }
+}
+@media only screen and (min-width: 700px) {
+  .text-container {
+    margin-top: 27%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  nav ul {
+    display: flex;
+    position: absolute;
+    left: 250px;
+  }
+
+  .lamp-container {
+    left: 14%;
+    width: 245px;
+  }
+
+  .light {
+    width: 579px;
+  }
+
+  .thing {
+    width: 24px;
+  }
+
+  .text-container {
+    margin-top: 13%;
+    margin-left: 56%;
+    opacity: 100;
+  }
+
+  .text-container a {
+    left: 61%;
+  }
+
+  .think {
+    display: block;
+    left: 74px;
+  }
+
+  .control {
+    display: flex;
+    left: -50%;
+  }
+}
+
+/* Laptop/Desktop Size Screens */
+@media only screen and (min-width: 950px) {
+  nav ul {
+    left: 388px;
+  }
+  .think{
+    left: 95px;
+  }
+}
+
+
+
+@media only screen and (min-width: 1024px) {
+  nav ul {
+    flex: 1;
+  text-align: right;
+  margin-left: 95px;
+  }
+
+
+  .think{
+    left: 110px;
+  }
+
+  .control{
+    top: 147px;
+    left: -127px;
+  }
+
+  .lamp-container {
+  position: absolute;
+  top: 0; /* top of the .hero */
+  left: 15%;
+  width: 248px;
+}
+.text-container{
+  margin-top: 10%;
+  margin-left: 50%;
+}
+}
+
+/* Laptop/Desktop Size Screens */
+@media only screen and (min-width: 1300px) {
+  nav ul {
+    flex: 1;
+  text-align: right;
+  margin-left: 550px;
+  }
+
+
+  .think{
+    left: 180px;
+  }
+
+  .control{
+    top: 103px;
+    left: -150px;
+  }
+
+  .lamp-container {
+  position: absolute;
+  top: 0; /* top of the .hero */
+  left: 15%;
+  width: 248px;
+}
+.text-container{
+  margin-top: 10%;
+  margin-left: 50%;
+}
+}
