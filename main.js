@@ -3,6 +3,7 @@ let lightImg = document.querySelector("#light");
 let btnClickAudio = new Audio("./sounds/button_click.mp3");
 let theThing = document.querySelector("#thing");
 let thinkImg = document.querySelector(".think");
+let textContainer = document.querySelector('.text-container');
 
 let toggleLight = (event) => {
     btnClickAudio.play();
@@ -14,6 +15,8 @@ let toggleLight = (event) => {
     theThing.classList.toggle("activeThing");
 
     thinkImg.classList.toggle("active-think");
+
+    textContainer.classList.toggle("active-light")
 
 
 };
