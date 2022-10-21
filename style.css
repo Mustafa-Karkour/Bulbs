@@ -23,7 +23,7 @@ nav {
 
 /* menu image that is INSIDE nav */
 nav .menu-img {
-  width: 34px;
+  width: 50px;
   margin-right: 20px;
   cursor: pointer;
 }
