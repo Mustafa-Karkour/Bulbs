@@ -36,6 +36,7 @@ nav .logo-img {
 nav ul {
   flex: 1;
   text-align: right;
+  margin-right: 55px;
 }
 
 nav ul li {
@@ -147,7 +148,7 @@ button span {
   display: block;
 }
 
-/*btn is toggles */
+/*btn toggles */
 .active {
   background-color: green;
   transition: background 1s;
@@ -164,4 +165,21 @@ button span {
 .active-light{
     opacity: 100;
     transition: opacity 1s;
+}
+
+.thing{
+  position: absolute;
+  top: -51px;
+  left: 89%;
+  width:26px;
+  cursor: pointer;
+
+  transform: translateY(0);
+  transition: transform 0.7s;
+  
+}
+
+.activeThing{
+  transform: translateY(32px);
+  transition: transform 0.7s;
 }
