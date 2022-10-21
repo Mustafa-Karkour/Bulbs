@@ -1,12 +1,15 @@
 let toggleLightBtn = document.querySelector("#toggleLightBtn");
 let lightImg = document.querySelector("#light");
 let btnClickAudio = new Audio("./sounds/button_click.mp3");
-
+let theThing = document.querySelector("#thing");
 
 let toggleLight = (event) => {
-    toggleLightBtn.classList.toggle("active")
-
-    lightImg.classList.toggle("active-light")
-
     btnClickAudio.play();
+
+    // toggleLightBtn.classList.toggle("active");
+
+    lightImg.classList.toggle("active-light");
+
+    theThing.classList.toggle("activeThing");
+
 };
